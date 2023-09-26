@@ -10,19 +10,20 @@ import SwiftUI
 import SwiftUI
 
 struct ContentView: View {
-  
-  @StateObject private var vm = ContentViewModel()
-  
-  var body: some View {
-    ZStack {
-      FrameView(image: vm.frame)
-        .edgesIgnoringSafeArea(.all)
+    
+    @StateObject private var vm = ContentViewModel()
+    
+    var body: some View {
+        ZStack {
+            FrameView(image: vm.frame)
+                .edgesIgnoringSafeArea(.all)
+            ErrorView(error: vm.error)
+        }
     }
-  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
+    static var previews: some View {
+        ContentView()
+    }
 }

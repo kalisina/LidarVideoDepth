@@ -17,7 +17,7 @@ struct FrameView: View {
         GeometryReader { geometry in
           Image(image, scale: 1.0, orientation: .upMirrored, label: label) // use .up for the back camera
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
             .frame(
               width: geometry.size.width,
               height: geometry.size.height,
