@@ -20,6 +20,7 @@
 		0477AA2F2AC308FC0071B741 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA2E2AC308FC0071B741 /* ErrorView.swift */; };
 		0477AA312AC309150071B741 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA302AC309150071B741 /* ToggleButton.swift */; };
 		0477AA332AC309270071B741 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA322AC309270071B741 /* FrameView.swift */; };
+		0477AA372AC3115A0071B741 /* CIFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA362AC3115A0071B741 /* CIFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0477AA302AC309150071B741 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		0477AA322AC309270071B741 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		0477AA342AC309440071B741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0477AA362AC3115A0071B741 /* CIFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0477AA342AC309440071B741 /* Info.plist */,
+				0477AA352AC311220071B741 /* Model */,
 				0477AA1E2AC307F50071B741 /* Camera */,
 				0477AA1F2AC307FB0071B741 /* Extensions */,
 				0477AA202AC308020071B741 /* ViewModels */,
@@ -126,6 +129,14 @@
 				0477AA322AC309270071B741 /* FrameView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0477AA352AC311220071B741 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0477AA362AC3115A0071B741 /* CIFilter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				0477AA132AC307EA0071B741 /* ContentView.swift in Sources */,
 				0477AA2B2AC308CC0071B741 /* ContentViewModel.swift in Sources */,
 				0477AA112AC307EA0071B741 /* LidarVideoDepthApp.swift in Sources */,
+				0477AA372AC3115A0071B741 /* CIFilter.swift in Sources */,
 				0477AA252AC3087E0071B741 /* CameraManager.swift in Sources */,
 				0477AA332AC309270071B741 /* FrameView.swift in Sources */,
 				0477AA2F2AC308FC0071B741 /* ErrorView.swift in Sources */,

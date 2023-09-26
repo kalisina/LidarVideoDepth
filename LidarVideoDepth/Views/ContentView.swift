@@ -17,7 +17,10 @@ struct ContentView: View {
         ZStack {
             FrameView(image: vm.frame)
                 .edgesIgnoringSafeArea(.all)
+            
             ErrorView(error: vm.error)
+            
+            ControlView(comicSelected: $vm.comicFilter, monoSelected: $vm.monoFilter, crystalSelected: $vm.crystalFilter)
         }
     }
 }

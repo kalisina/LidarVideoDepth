@@ -15,6 +15,11 @@ class ContentViewModel: ObservableObject {
     private let frameManager = FrameManager.shared
     private let cameraManager = CameraManager.shared
     
+    var comicFilter = false
+    var monoFilter = false
+    var crystalFilter = false
+    private let context = CIContext()
+
     init() {
         setupSubscriptions()
     }
@@ -23,7 +28,22 @@ class ContentViewModel: ObservableObject {
         frameManager.$current
             .receive(on: RunLoop.main)
             .compactMap { cvPixelBuffer in
-                return CGImage.create(from: cvPixelBuffer)
+                guard let cgImage = CGImage.create(from: cvPixelBuffer) else { return nil }
+                var ciImage = CIImage(cgImage: cgImage)
+                
+                if self.comicFilter {
+                    ciImage = ciImage.applyingFilter(CIFilter.CIComicEffect.rawValue)
+                }
+                
+                if self.monoFilter {
+                    ciImage = ciImage.applyingFilter(CIFilter.CIPhotoEffectNoir.rawValue)
+                }
+                
+                if self.crystalFilter {
+                    ciImage = ciImage.applyingFilter(CIFilter.CICrystallize.rawValue)
+                }
+                
+                return self.context.createCGImage(ciImage, from: ciImage.extent)
             }
             .assign(to: &$frame)
         
@@ -33,6 +53,3 @@ class ContentViewModel: ObservableObject {
             .assign(to: &$error)
     }
 }
-
-
-
