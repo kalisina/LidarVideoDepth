@@ -11,6 +11,15 @@
 		0477AA132AC307EA0071B741 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA122AC307EA0071B741 /* ContentView.swift */; };
 		0477AA152AC307EC0071B741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0477AA142AC307EC0071B741 /* Assets.xcassets */; };
 		0477AA182AC307EC0071B741 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0477AA172AC307EC0071B741 /* Preview Assets.xcassets */; };
+		0477AA232AC308410071B741 /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA222AC308410071B741 /* CameraError.swift */; };
+		0477AA252AC3087E0071B741 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA242AC3087E0071B741 /* CameraManager.swift */; };
+		0477AA272AC3089C0071B741 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA262AC3089C0071B741 /* FrameManager.swift */; };
+		0477AA292AC308B70071B741 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA282AC308B70071B741 /* CGImageExtension.swift */; };
+		0477AA2B2AC308CC0071B741 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA2A2AC308CC0071B741 /* ContentViewModel.swift */; };
+		0477AA2D2AC308E90071B741 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA2C2AC308E90071B741 /* ControlView.swift */; };
+		0477AA2F2AC308FC0071B741 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA2E2AC308FC0071B741 /* ErrorView.swift */; };
+		0477AA312AC309150071B741 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA302AC309150071B741 /* ToggleButton.swift */; };
+		0477AA332AC309270071B741 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA322AC309270071B741 /* FrameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,16 @@
 		0477AA122AC307EA0071B741 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0477AA142AC307EC0071B741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0477AA172AC307EC0071B741 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0477AA222AC308410071B741 /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
+		0477AA242AC3087E0071B741 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		0477AA262AC3089C0071B741 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		0477AA282AC308B70071B741 /* CGImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
+		0477AA2A2AC308CC0071B741 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		0477AA2C2AC308E90071B741 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		0477AA2E2AC308FC0071B741 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0477AA302AC309150071B741 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		0477AA322AC309270071B741 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		0477AA342AC309440071B741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +70,12 @@
 		0477AA0F2AC307EA0071B741 /* LidarVideoDepth */ = {
 			isa = PBXGroup;
 			children = (
+				0477AA342AC309440071B741 /* Info.plist */,
+				0477AA1E2AC307F50071B741 /* Camera */,
+				0477AA1F2AC307FB0071B741 /* Extensions */,
+				0477AA202AC308020071B741 /* ViewModels */,
+				0477AA212AC308090071B741 /* Views */,
 				0477AA102AC307EA0071B741 /* LidarVideoDepthApp.swift */,
-				0477AA122AC307EA0071B741 /* ContentView.swift */,
 				0477AA142AC307EC0071B741 /* Assets.xcassets */,
 				0477AA162AC307EC0071B741 /* Preview Content */,
 			);
@@ -65,6 +88,44 @@
 				0477AA172AC307EC0071B741 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0477AA1E2AC307F50071B741 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				0477AA222AC308410071B741 /* CameraError.swift */,
+				0477AA242AC3087E0071B741 /* CameraManager.swift */,
+				0477AA262AC3089C0071B741 /* FrameManager.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		0477AA1F2AC307FB0071B741 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0477AA282AC308B70071B741 /* CGImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0477AA202AC308020071B741 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0477AA2A2AC308CC0071B741 /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0477AA212AC308090071B741 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0477AA122AC307EA0071B741 /* ContentView.swift */,
+				0477AA2C2AC308E90071B741 /* ControlView.swift */,
+				0477AA2E2AC308FC0071B741 /* ErrorView.swift */,
+				0477AA302AC309150071B741 /* ToggleButton.swift */,
+				0477AA322AC309270071B741 /* FrameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0477AA2D2AC308E90071B741 /* ControlView.swift in Sources */,
+				0477AA312AC309150071B741 /* ToggleButton.swift in Sources */,
+				0477AA272AC3089C0071B741 /* FrameManager.swift in Sources */,
+				0477AA292AC308B70071B741 /* CGImageExtension.swift in Sources */,
 				0477AA132AC307EA0071B741 /* ContentView.swift in Sources */,
+				0477AA2B2AC308CC0071B741 /* ContentViewModel.swift in Sources */,
 				0477AA112AC307EA0071B741 /* LidarVideoDepthApp.swift in Sources */,
+				0477AA252AC3087E0071B741 /* CameraManager.swift in Sources */,
+				0477AA332AC309270071B741 /* FrameView.swift in Sources */,
+				0477AA2F2AC308FC0071B741 /* ErrorView.swift in Sources */,
+				0477AA232AC308410071B741 /* CameraError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +340,8 @@
 				DEVELOPMENT_TEAM = 24Y5J3XVJV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LidarVideoDepth/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to use your camera to create Depth Map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +371,8 @@
 				DEVELOPMENT_TEAM = 24Y5J3XVJV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LidarVideoDepth/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to use your camera to create Depth Map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
