@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct FrameView: View {
-  
-  var image: CGImage?
-  private let label = Text("Camera Feed")
-  
+    
+    var image: CGImage?
+    private let label = Text("Camera Feed")
+    
     var body: some View {
-      if let image = image {
-        GeometryReader { geometry in
-          Image(image, scale: 1.0, orientation: .upMirrored, label: label) // use .up for the back camera
-            .resizable()
-            .scaledToFill()
-            .frame(
-              width: geometry.size.width,
-              height: geometry.size.height,
-              alignment: .center)
-            .clipped()
+        if let image = image {
+            GeometryReader { geometry in
+                Image(image, scale: 1.0, orientation: .upMirrored, label: label) // use .up for the back camera
+                    .resizable()
+                    .scaledToFill()
+                    .frame(
+                        width: geometry.size.width,
+                        height: geometry.size.height,
+                        alignment: .center)
+                    .clipped()
+            }
+        } else {
+            Color.black
         }
-      } else {
-        Color.black
-      }
     }
 }
 
