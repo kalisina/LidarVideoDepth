@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044129F92AFECD5700A27C3B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044129F82AFECD5700A27C3B /* Renderer.swift */; };
+		044129FB2AFECDC900A27C3B /* CustomMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044129FA2AFECDC900A27C3B /* CustomMetalView.swift */; };
 		0477AA112AC307EA0071B741 /* LidarVideoDepthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA102AC307EA0071B741 /* LidarVideoDepthApp.swift */; };
 		0477AA132AC307EA0071B741 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477AA122AC307EA0071B741 /* ContentView.swift */; };
 		0477AA152AC307EC0071B741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0477AA142AC307EC0071B741 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044129F82AFECD5700A27C3B /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		044129FA2AFECDC900A27C3B /* CustomMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMetalView.swift; sourceTree = "<group>"; };
 		0477AA0D2AC307EA0071B741 /* LidarVideoDepth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LidarVideoDepth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0477AA102AC307EA0071B741 /* LidarVideoDepthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LidarVideoDepthApp.swift; sourceTree = "<group>"; };
 		0477AA122AC307EA0071B741 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044129F72AFEA17F00A27C3B /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				044129F82AFECD5700A27C3B /* Renderer.swift */,
+				044129FA2AFECDC900A27C3B /* CustomMetalView.swift */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
 		0477AA042AC307EA0071B741 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				0477AA342AC309440071B741 /* Info.plist */,
+				044129F72AFEA17F00A27C3B /* Metal */,
 				0477AA352AC311220071B741 /* Model */,
 				0477AA1E2AC307F50071B741 /* Camera */,
 				0477AA1F2AC307FB0071B741 /* Extensions */,
@@ -214,6 +228,7 @@
 				0477AA272AC3089C0071B741 /* FrameManager.swift in Sources */,
 				0477AA292AC308B70071B741 /* CGImageExtension.swift in Sources */,
 				0477AA132AC307EA0071B741 /* ContentView.swift in Sources */,
+				044129F92AFECD5700A27C3B /* Renderer.swift in Sources */,
 				0477AA2B2AC308CC0071B741 /* ContentViewModel.swift in Sources */,
 				0477AA112AC307EA0071B741 /* LidarVideoDepthApp.swift in Sources */,
 				0477AA372AC3115A0071B741 /* CIFilter.swift in Sources */,
@@ -221,6 +236,7 @@
 				0477AA332AC309270071B741 /* FrameView.swift in Sources */,
 				0477AA2F2AC308FC0071B741 /* ErrorView.swift in Sources */,
 				0477AA232AC308410071B741 /* CameraError.swift in Sources */,
+				044129FB2AFECDC900A27C3B /* CustomMetalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
